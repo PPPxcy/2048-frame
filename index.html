@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>PPPxcy's new 2048</title>
+		<meta name="description" content="PPPxcy's new 2048">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="/PPPicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="index.css">
+		<style id="moving-ani"></style>
+	</head><body>
+		<script type="text/javascript" src="index.js"></script>
+		<div class="left-right" id="box-content">
+			<div>
+				<p style="font-size: 80px; margin-top: -16px; margin-bottom: -1px;"><b>2048</b></p><p>Join the tiles, get to <b>2048</b>!</p>
+			</div><div class="text-center">
+				<span class="score-box">
+					<div id="current-score">1234</div>
+				</span><span class="score-box">
+					<div id="highest-score">123456</div>
+				</span><div id="new-game">
+					<button type="button" name="newgame">New Game</button>
+				</div>
+			</div>
+		</div>
+		<!-- Please don't put any other thing in this style, or the adding will be discarded! -->
+		<div id="box-2048"></div><script type="text/javascript">
+			(new Map2048(default2048.lawMoving, default2048.lawTile, default2048.lawMerging, default2048.lawMessage)).gameStart(document.getElementById('box-2048'), document.getElementById('current-score'), document.getElementById('highest-score'));
+		</script>
+	</body>
+</html>
